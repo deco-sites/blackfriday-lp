@@ -36,14 +36,14 @@ export default function ImageGallery({
   alt,
 }: Props) {
   return (
-    <section class="px-4 max-w-[1360px] lg:m-auto">
-      <h1 class="text-base-content text-4xl text-center mt-10 mb-4 lg:text-6xl lg:mb-6">
+    <section class="container max-w-[1080px] text-white bg-black mx-14 px-14 lg:m-20">
+      <h1 class="  text-4xl text-center mt-10 mb-4 lg:text-6xl lg:mb-6">
         {title}
       </h1>
-      <p class="text-center text-base-content text-2xl leading-7">
+      <p class="text-center text-2xl leading-7">
         {description}
       </p>
-      <div class="grid grid-cols-2 gap-4 mt-11 lg:flex lg:gap-8 lg:mt-20">
+      <div class="grid grid-cols-2 gap-8 mt-11 px-14 lg:flex lg:gap-10 lg:mt-20">
         <img
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageOne}

@@ -86,7 +86,7 @@ const DEFAULT_PROPS = {
   preload: true,
 };
 
-function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
+export function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
   const {
     alt,
     mobile,

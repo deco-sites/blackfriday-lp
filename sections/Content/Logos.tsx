@@ -58,7 +58,6 @@ function Logos(props: Props) {
         alignment={layout?.headerAlignment || "center"}
         colorReverse={true}
       />
-      <div class="absolute w-[45%] inset-0 translate-y-[75%] translate-x-1/2 gradient opacity-30" />
       <div class="logos">
         <div class="logos-slide">
           {list.map((element) => (
