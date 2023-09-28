@@ -186,13 +186,13 @@ export default function Gallery(props: Props) {
       : "sm:row-span-2";
 
   return (
-    <section class="container px-4 py-8 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-0">
+    <section class=" bg-black text-white h-full px-12 pt-8 flex flex-col gap-10 lg:gap-12 lg:pt-10 lg:px-14 ">
       <Header
         title={title}
         description={description}
         alignment={layout?.headerAlignment || "center"}
       />
-      <ul class="grid grid-flow-col grid-cols-2 grid-rows-6 gap-4 list-none">
+      <ul class="grid grid-flow-col grid-cols-2 grid-rows-6 gap-12 list-none">
         {banners?.map((banner, index) => (
           <li class={`${mobileItemLayout(index)} ${desktopItemLayout(index)}`}>
             <Banner {...banner} borderRadius={props.layout?.borderRadius} />
