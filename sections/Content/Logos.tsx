@@ -1,10 +1,10 @@
 import Image from "apps/website/components/Image.tsx";
 import Header from "$store/components/ui/SectionHeader.tsx";
 import { useMemo } from "preact/hooks";
-import type { ImageWidget } from "apps/admin/widgets.ts";
+import type { ImageWidget as ImageType } from "apps/admin/widgets.ts";
 
 export interface Image {
-  image: ImageWidget;
+  image: ImageType;
   altText: string;
 }
 
@@ -45,27 +45,42 @@ function Logos(props: Props) {
     [],
   );
 
+  function handleLogosCopied() {
+    const copy = document.querySelector(".logos-slide")?.cloneNode(true);
+    document.querySelector(".logos")?.appendChild(copy!);
+  }
+
   return (
-    <div class="w-full container px-4 py-8 flex flex-col gap-8 lg:gap-12 lg:py-10 lg:px-0">
+    <div class="w-full px-4 py-8 flex flex-col gap-8 lg:gap-4 lg:py-10 lg:px-0 bg-black relative">
       <Header
         title={title}
         description={description}
         alignment={layout?.headerAlignment || "center"}
+        colorReverse={true}
       />
-      <div class="w-full text-center items-center">
-        {list.map((element) => (
-          <div class="w-36 lg:w-40 h-17 lg:h-20 px-4 lg:px-6 py-6 lg:py-4 inline-block align-middle">
-            <div class="flex w-full h-full items-center justify-center">
-              <Image
-                width={300}
-                height={300}
-                src={element.image}
-                alt={element.altText || ""}
-                class="max-w-full max-h-full"
-              />
+      <div class="absolute w-[45%] inset-0 translate-y-[75%] translate-x-1/2 gradient opacity-30" />
+      <div class="logos">
+        <div class="logos-slide">
+          {list.map((element) => (
+            <div class="w-36 h-36 px-4 lg:px-6 lg:py-4 inline-block align-middle lg:m-5">
+              <div class="flex w-36 h-36 items-center justify-center">
+                <img
+                  width={140}
+                  height={140}
+                  src={element.image}
+                  alt={element.altText || ""}
+                  href={"/"}
+                  class="max-w-full max-h-full hover:scale-125 duration-100 opacity-50 hover:opacity-100"
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(${handleLogosCopied.toString()})()`,
+          }}
+        />
       </div>
     </div>
   );

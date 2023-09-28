@@ -1,5 +1,6 @@
 import { itemToAnalyticsItem, useCart } from "apps/wake/hooks/useCart.ts";
 import BaseCart from "../common/Cart.tsx";
+import { CHAR_0 } from "https://deno.land/std@0.193.0/path/_constants.ts";
 
 function Cart() {
   const { cart, loading, updateItem, addCoupon } = useCart();
@@ -33,6 +34,14 @@ function Cart() {
         updateItem({
           quantity,
           productVariantId: items[index]?.productVariantId,
+          customization: [{
+            customizationId: 0,
+            value: "",
+          }],
+          subscription: {
+            recurringTypeId: 0,
+            subscriptionGroupId: 0,
+          },
         })}
       itemToAnalyticsItem={(index) => {
         const item = items[index];

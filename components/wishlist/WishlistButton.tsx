@@ -49,7 +49,10 @@ function WishlistButton({
           fetching.value = true;
           inWishlist
             ? await removeItem({ id: listItem.value!.id }!)
-            : await addItem(item);
+            : await addItem({
+              sku: item.sku,
+              productId: item.productId ?? "1",
+            });
         } finally {
           fetching.value = false;
         }
