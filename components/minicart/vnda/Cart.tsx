@@ -38,7 +38,7 @@ function Cart() {
       checkoutHref={`/checkout/${token}`}
       onAddCoupon={(code) => update({ coupon_code: code })}
       onUpdateQuantity={(quantity: number, index: number) =>
-        updateItem({ quantity, itemId: items[index].id })}
+        updateItem({ quantity, itemId: items[index].id! })}
       itemToAnalyticsItem={(index) => {
         const item = items[index];
 

@@ -11,6 +11,14 @@ function AddToCartButton(props: Props) {
     addItem({
       productVariantId: Number(props.productID),
       quantity: 1,
+      customization: [{
+        customizationId: 0,
+        value: "0",
+      }],
+      subscription: {
+        recurringTypeId: 0,
+        subscriptionGroupId: 0,
+      },
     });
 
   return <Button onAddItem={onAddItem} {...props} />;
