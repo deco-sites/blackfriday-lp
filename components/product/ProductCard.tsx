@@ -96,7 +96,7 @@ function ProductCard(
     <a
       href={url && relative(url)}
       aria-label="view product"
-      class="btn btn-block"
+      class="btn btn-block bg-red-500 hover:bg-red-400 text-black duration-150 transition rounded-md"
     >
       {l?.basics?.ctaText || "Ver produto"}
     </a>
@@ -135,6 +135,10 @@ function ProductCard(
         class="relative overflow-hidden"
         style={{ aspectRatio: `${WIDTH} / ${HEIGHT}` }}
       >
+        <span class="indicator-item indicator-start badge badge-primary border-none text-white bg-red-500 absolute left-1 top-2 z-30">
+          50% OFF
+        </span>
+
         {/* Wishlist button */}
         <div
           class={`absolute top-2 z-10

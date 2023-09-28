@@ -16,16 +16,6 @@ export interface Banner {
   mobile: ImageWidget;
   /** @description Image's alt text */
   alt: string;
-  action?: {
-    /** @description when user clicks on the image, go to this link */
-    href: string;
-    /** @description Image text title */
-    title: string;
-    /** @description Image text subtitle */
-    subTitle: string;
-    /** @description Button label */
-    label: string;
-  };
 }
 
 export interface Props {
@@ -91,13 +81,12 @@ export function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     alt,
     mobile,
     desktop,
-    action,
   } = image;
 
   return (
     <a
-      href={action?.href ?? "#"}
-      aria-label={action?.label}
+      href={"#"}
+      aria-label="Banner"
       class="relative h-[600px] overflow-y-hidden w-full"
     >
       <Picture preload={lcp}>
@@ -122,17 +111,6 @@ export function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           alt={alt}
         />
       </Picture>
-      {action && (
-        <div class="absolute h-min top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] flex flex-col gap-4 p-4 rounded glass">
-          <span class="text-6xl font-medium text-base-100">
-            {action.title}
-          </span>
-          <span class="font-medium text-xl text-base-100">
-            {action.subTitle}
-          </span>
-          <Button class="glass">{action.label}</Button>
-        </div>
-      )}
     </a>
   );
 }
@@ -214,9 +192,12 @@ function BannerCarousel(props: Props) {
         ))}
       </Slider>
 
-      <Buttons />
-
-      <Dots images={images} interval={interval} />
+      {images.length > 1 && (
+        <>
+          <Buttons />
+          <Dots images={images} interval={interval} />
+        </>
+      )}
 
       <SliderJS rootId={id} interval={interval && interval * 1e3} infinite />
     </div>
