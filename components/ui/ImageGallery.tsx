@@ -45,7 +45,7 @@ export default function ImageGallery({
       <p class="text-center text-2xl leading-7">
         {description}
       </p>
-      <div class="">
+      <div class="grid grid-cols-2 grid-flow-col grid-rows-5 gap-8 mt-11 px-14 lg:flex lg:gap-10 lg:mt-20">
           <Image
             title={title}
             class="min-w-full object-cover max-w-[156px] max-h-[156px] "
