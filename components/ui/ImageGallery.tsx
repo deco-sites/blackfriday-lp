@@ -1,4 +1,5 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import Image from "apps/website/components/Image.tsx";
 
 /**
  * @titleBy title
@@ -44,25 +45,41 @@ export default function ImageGallery({
         {description}
       </p>
       <div class="grid grid-cols-2 gap-8 mt-11 px-14 lg:flex lg:gap-10 lg:mt-20">
-        <img
+        <Image
+          title={title}
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageOne}
           alt={alt}
+          loading="lazy"
+          width={156}
+          height={156}
         />
-        <img
+        <Image
+          title={title}
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageTwo}
           alt={alt}
+          loading="lazy"
+          width={156}
+          height={156}
         />
-        <img
+        <Image
+          title={title}
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageThree}
           alt={alt}
+          loading="lazy"
+          width={156}
+          height={156}
         />
-        <img
+        <Image
+          title={title}
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageFour}
           alt={alt}
+          loading="lazy"
+          width={156}
+          height={156}
         />
       </div>
     </section>

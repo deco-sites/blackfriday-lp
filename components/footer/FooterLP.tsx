@@ -1,12 +1,15 @@
+import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 
 export interface Props {
+  
   subTitle?: string;
   email?: string;
   linkEmail?: string;
   socialMedia?: {
     linkSocialMedia?: string;
     image: {
+      titleImage: string;
       icon: ImageWidget;
       description?: string;
     };
@@ -31,10 +34,14 @@ export default function FooterLP(
           {socialMedia?.map((socialMedia) => (
             <div class="w-[40px] h-[40px] rounded-full flex flex-row items-center justify-center mt-4 pointer">
               <a href={socialMedia.linkSocialMedia}>
-                <img
+                <Image
+                  title={socialMedia.image.titleImage}
                   class=""
                   src={socialMedia.image.icon}
                   alt={socialMedia.image.description}
+                  loading="lazy"
+                  width={40}
+                  height={40}
                 />
               </a>
             </div>
