@@ -45,8 +45,7 @@ export default function ImageGallery({
       <p class="text-center text-2xl leading-7">
         {description}
       </p>
-      <div class="grid grid-cols-2 gap-8 mt-11 px-14 lg:flex lg:gap-10 lg:mt-20">
-        <div>
+      <div class="">
           <Image
             title={title}
             class="min-w-full object-cover max-w-[156px] max-h-[156px] "
@@ -55,8 +54,6 @@ export default function ImageGallery({
             width={156}
             height={156}
           />
-        </div>
-        <div>
           <Image
             title={title}
             class="min-w-full object-cover max-w-[156px] max-h-[156px] "
@@ -65,8 +62,6 @@ export default function ImageGallery({
             width={156}
             height={156}
           />
-        </div>
-        <div>
           <Image
             title={title}
             class="min-w-full object-cover max-w-[156px] max-h-[156px] "
@@ -75,8 +70,6 @@ export default function ImageGallery({
             width={156}
             height={156}
           />
-        </div>
-        <div>
           <Image
             title={title}
             class="min-w-full object-cover max-w-[156px] max-h-[156px] "
@@ -85,7 +78,6 @@ export default function ImageGallery({
             width={156}
             height={156}
           />
-        </div>
       </div>
     </section>
   );
