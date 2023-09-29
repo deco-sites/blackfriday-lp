@@ -14,7 +14,7 @@ export default function SectionBridge({
 }: Props) {
   return (
     <section class="flex items-center justify-center w-full h-full bg-black">
-      <div class="min-w-[1360px] h-[500px] flex flex-col items-center justify-center">
+      <div class="max-w-[1360px] h-full flex flex-col items-center justify-center">
         <div class="flex flex-col text-center m-20 gap-4">
           <div class="w-full flex flex-col items-center justify-center ">
             <h1 class="lg:max-w-[800px] text-white text-[80px] text-center leading-[80px] font-bold mb-4">

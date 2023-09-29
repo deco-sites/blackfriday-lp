@@ -18,7 +18,7 @@ export default function FooterLP(
 ) {
   return (
     <section class="flex items-center justify-center w-full h-full bg-black">
-      <div class="min-w-[1360px] h-[400px] flex flex-col items-center justify-center">
+      <div class="w-full h-[300px] flex flex-col items-center justify-center">
         <div class="flex flex-col text-center m-2 gap-4">
           <h1 class="text-3xl font-medium underline">
             <a href={`mailto:${linkEmail}`}>{email}</a>
