@@ -36,6 +36,7 @@ export default function ImageGallery({
   imageFour,
   alt,
 }: Props) {
+
   return (
     <section class="container max-w-[1080px] text-white bg-black mx-14 px-14 lg:m-20">
       <h1 class="  text-4xl text-center mt-10 mb-4 lg:text-6xl lg:mb-6">
