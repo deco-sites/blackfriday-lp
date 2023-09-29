@@ -1,4 +1,5 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import Image from "apps/website/components/Image.tsx";
 
 /**
  * @titleBy title
@@ -35,6 +36,7 @@ export default function ImageGallery({
   imageFour,
   alt,
 }: Props) {
+
   return (
     <section class="container max-w-[1080px] text-white bg-black mx-14 px-14 lg:m-20">
       <h1 class="  text-4xl text-center mt-10 mb-4 lg:text-6xl lg:mb-6">
@@ -44,25 +46,37 @@ export default function ImageGallery({
         {description}
       </p>
       <div class="grid grid-cols-2 gap-8 mt-11 px-14 lg:flex lg:gap-10 lg:mt-20">
-        <img
+        <Image
+          title={title}
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageOne}
           alt={alt}
+          width={156}
+          height={156}
         />
-        <img
+        <Image
+          title={title}
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageTwo}
           alt={alt}
+          width={156}
+          height={156}
         />
-        <img
+        <Image
+          title={title}
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageThree}
           alt={alt}
+          width={156}
+          height={156}
         />
-        <img
+        <Image
+          title={title}
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageFour}
           alt={alt}
+          width={156}
+          height={156}
         />
       </div>
     </section>
