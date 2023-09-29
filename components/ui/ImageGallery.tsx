@@ -51,7 +51,6 @@ export default function ImageGallery({
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageOne}
           alt={alt}
-          loading="lazy"
           width={156}
           height={156}
         />
@@ -60,7 +59,6 @@ export default function ImageGallery({
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageTwo}
           alt={alt}
-          loading="lazy"
           width={156}
           height={156}
         />
@@ -69,7 +67,6 @@ export default function ImageGallery({
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageThree}
           alt={alt}
-          loading="lazy"
           width={156}
           height={156}
         />
@@ -78,7 +75,6 @@ export default function ImageGallery({
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "
           src={imageFour}
           alt={alt}
-          loading="lazy"
           width={156}
           height={156}
         />
