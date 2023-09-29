@@ -1,4 +1,1 @@
-export { default } from "$store/components/ui/SectionBridge.tsx"; 
-
-
-
+export { default } from "$store/components/ui/SectionBridge.tsx";

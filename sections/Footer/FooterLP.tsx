@@ -1,1 +1,1 @@
-export { default } from "$store/components/footer/FooterLP.tsx"; 
+export { default } from "$store/components/footer/FooterLP.tsx";
