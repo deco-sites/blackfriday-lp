@@ -192,7 +192,7 @@ export default function Gallery(props: Props) {
         description={description}
         alignment={layout?.headerAlignment || "center"}
       />
-      <ul class="grid grid-flow-col overflow-hidden grid-cols-2 grid-rows-5 pb-16 gap-12 list-none">
+      <ul class="grid overflow-hidden grid-cols-2 grid-rows-2 pb-16 gap-12 list-none">
         {banners?.map((banner, index) => (
           <li class={`${mobileItemLayout(index)} ${desktopItemLayout(index)}`}>
             <Banner {...banner} borderRadius={props.layout?.borderRadius} />

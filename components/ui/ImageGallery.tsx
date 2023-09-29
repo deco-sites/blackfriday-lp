@@ -38,14 +38,14 @@ export default function ImageGallery({
 }: Props) {
 
   return (
-    <section class="container max-w-[1080px] text-white bg-black mx-14 px-14 lg:m-20">
+    <section class="container max-w-[1080px] h-full text-white bg-black mx-14 px-14 lg:m-20">
       <h1 class="  text-4xl text-center mt-10 mb-4 lg:text-6xl lg:mb-6">
         {title}
       </h1>
       <p class="text-center text-2xl leading-7">
         {description}
       </p>
-      <div class="grid grid-cols-2 grid-flow-col grid-rows-5 gap-8 mt-11 px-14 lg:flex lg:gap-10 lg:mt-20">
+      <div class="grid grid-cols-2 grid-rows-2 gap-8 mt-11 px-14 lg:flex lg:gap-10 lg:mt-20">
           <Image
             title={title}
             class="min-w-full object-cover max-w-[156px] max-h-[156px] "
