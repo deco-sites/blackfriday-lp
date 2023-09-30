@@ -14,7 +14,7 @@ export default function SectionBridge({
   button,
 }: Props) {
   return (
-    <section class="flex items-center justify-center w-full h-full bg-black">
+    <section class="flex items-center justify-center w-full h-full bg-black px-2">
       <div class="max-w-[1360px] h-full flex flex-col items-center justify-center my-20">
         <div class="flex flex-col text-center gap-4">
           <div class="w-full flex flex-col items-center justify-center">

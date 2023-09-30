@@ -7,7 +7,7 @@ export interface Props {
 
 function MenuItem({ item }: { item: INavItem }) {
   return (
-    <div class="collapse collapse-plus">
+    <div class="collapse collapse-arrow">
       <input type="checkbox" />
       <div class="collapse-title">{item.name}</div>
       <div class="collapse-content">
