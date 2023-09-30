@@ -19,7 +19,7 @@ export default function BannerItem(
   } = image;
 
   return (
-    <div   
+    <div
       style={`background-image: url(${desktop});`}
       class="h-[200px] lg:h-[600px] bg-fixed bg-center bg-cover bg-no-repeat overflow-y-hidden w-full"
     />

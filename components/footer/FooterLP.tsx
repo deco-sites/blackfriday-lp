@@ -2,7 +2,6 @@ import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 
 export interface Props {
-  
   subTitle?: string;
   email?: string;
   linkEmail?: string;
